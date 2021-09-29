@@ -265,14 +265,15 @@ func combinationAlphabetColumns() []string {
 	alphabetBase := []string{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}
 	cantIteration := len(alphabetBase)
-	for i := 0; i < 2; i++ {
+	for i := 0; i < 3; i++ {
 		if i == 1 {
-			cantIteration = 9
+			cantIteration = 7
 		}
 		for j := 0; j < cantIteration; j++ {
 			alphabetBase = append(alphabetBase, alphabetBase[i]+alphabetBase[j])
 		}
 	}
+	fmt.Println(alphabetBase)
 	return alphabetBase
 }
 func fixingNumberConsecutive(fileToFix *excelize.File, sheetName string) {
